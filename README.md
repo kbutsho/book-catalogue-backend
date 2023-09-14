@@ -1,4 +1,4 @@
-### Live Link: https://prisma-book.vercel.app/
+### Live Link: https://kbutsho-book.vercel.app/
 
 ### Application Routes:
 
