@@ -75,9 +75,7 @@ const getAllBook = async (filters: IBookFilter, options: IPaginationOptions): Pr
     orderBy:
       options.sortBy && options.sortOrder
         ? { [options.sortBy]: options.sortOrder }
-        : {
-          createdAt: 'desc',
-        },
+        : {},
   });
   const total = await prisma.book.count({
     where: whereConditions
@@ -105,9 +103,7 @@ const getBooksByCategoryId = async (categoryId: string, options: IPaginationOpti
     orderBy:
       options.sortBy && options.sortOrder
         ? { [options.sortBy]: options.sortOrder }
-        : {
-          createdAt: 'desc',
-        },
+        : {},
   });
   const total = await prisma.book.count({
     where: { categoryId: categoryId }

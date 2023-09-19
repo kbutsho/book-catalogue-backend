@@ -46,7 +46,6 @@ const getAllOrder = async (role: string, userId: string): Promise<IOrder[]> => {
           }
         },
         createdAt: true,
-        updatedAt: true
       }
     });
     return result;
@@ -66,8 +65,7 @@ const getAllOrder = async (role: string, userId: string): Promise<IOrder[]> => {
             quantity: true
           }
         },
-        createdAt: true,
-        updatedAt: true
+        createdAt: true
       }
     });
     return result;
