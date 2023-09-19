@@ -3,10 +3,6 @@ import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { userService } from './user.service';
-import { jwtHelpers } from '../../../helpers/jwtHelpers';
-import ApiError from '../../../errors/ApiError';
-import config from '../../../config';
-import { Secret } from 'jsonwebtoken';
 
 
 const geAllUser = catchAsync(async (req: Request, res: Response) => {
@@ -14,7 +10,7 @@ const geAllUser = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'users retrieved successfully!',
+    message: `${data.length} users retrieved successfully!`,
     data,
   });
 });
@@ -52,16 +48,9 @@ const deleteUser = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-const profile = catchAsync(async (req: Request, res: Response) => {
-  const token = req.headers.authorization;
-  if (!token) {
-    throw new ApiError(httpStatus.UNAUTHORIZED, 'You are not authorized');
-  }
-  // verify token
-  let verifiedUser = null;
-  verifiedUser = jwtHelpers.verifyToken(token, config.jwt_secret as Secret);
-  const id = verifiedUser.userId;
-  const result = await userService.profile(id);
+const profileInfo = catchAsync(async (req: Request, res: Response) => {
+  const { userId } = req.user!
+  const result = await userService.profileInfo(userId);
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
@@ -75,5 +64,5 @@ export const userController = {
   getSingleUser,
   updateUser,
   deleteUser,
-  profile
+  profileInfo
 };

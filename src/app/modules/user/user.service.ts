@@ -13,11 +13,7 @@ const getAllUser = async (): Promise<IUser[]> => {
       role: true,
       contactNo: true,
       address: true,
-      profileImg: true,
-      createdAt: true,
-      updatedAt: true,
-      reviews: true,
-      orders: true,
+      profileImg: true
     },
   });
   return result;
@@ -35,11 +31,7 @@ const getSingleUser = async (id: string): Promise<IUser | null> => {
       role: true,
       contactNo: true,
       address: true,
-      profileImg: true,
-      createdAt: true,
-      updatedAt: true,
-      reviews: true,
-      orders: true,
+      profileImg: true
     },
   });
   if (!result) {
@@ -65,10 +57,10 @@ const deleteUser = async (id: string): Promise<User> => {
   return result;
 };
 
-const profile = async (id: string): Promise<IUser | null> => {
+const profileInfo = async (userId: string): Promise<IUser | null> => {
   const result = await prisma.user.findUnique({
     where: {
-      id: id,
+      id: userId,
     },
     select: {
       id: true,
@@ -77,21 +69,16 @@ const profile = async (id: string): Promise<IUser | null> => {
       role: true,
       contactNo: true,
       address: true,
-      profileImg: true,
-      createdAt: true,
-      updatedAt: true,
-      reviews: true,
-      orders: true,
+      profileImg: true
     },
   });
   return result;
 };
 
 export const userService = {
-  // createUser,
   getAllUser,
   getSingleUser,
   updateUser,
   deleteUser,
-  profile,
+  profileInfo,
 };
