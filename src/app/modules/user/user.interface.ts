@@ -7,5 +7,4 @@ export type IUser = {
   address: string;
   profileImg: string;
   createdAt?: Date;
-  updatedAt?: Date;
 };

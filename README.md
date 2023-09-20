@@ -1,39 +1,35 @@
-### Live Link: https://kbutsho-book.vercel.app/
+### Live Link: https://book-catallog-backend-pi.vercel.app
 
 ### Application Routes:
 
-#### Auth
-- api/v1/auth/signup (POST)
-- api/v1/auth/signin (POST)
-
 #### User
 
-
-- api/v1/users (GET)
-- api/v1/users/6177a5b87d32123f08d2f5d4 (Single GET) Include an id that is saved in your database
-- api/v1/users/6177a5b87d32123f08d2f5d4 (PATCH)
-- api/v1/users/6177a5b87d32123f08d2f5d4 (DELETE) Include an id that is saved in your database
-- api/v1/profile (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/auth/signup (POST)
+- https://book-catallog-backend-pi.vercel.app/api/v1/users (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/users/0bf3449a-96b8-4a68-944b-e15b4aaccf23 (Single GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/users/0bf3449a-96b8-4a68-944b-e15b4aaccf23 (PATCH)
+- https://book-catallog-backend-pi.vercel.app/api/v1/users/ebb6679b-3063-4a58-87be-c4eecc84f93c (DELETE) 
+- https://book-catallog-backend-pi.vercel.app/api/v1/profile (GET)
 
 ### Category
 
-- api/v1/categories/create-category (POST)
-- api/v1/categories (GET)
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (Single GET) Include an id that is saved in your database
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (PATCH)
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (DELETE) Include an id that is saved in your database
+- https://book-catallog-backend-pi.vercel.app/api/v1/categories/create-category (POST)
+- https://book-catallog-backend-pi.vercel.app/api/v1/categories (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/categories/920ba306-840e-4aa7-9d68-af0f1fd7b995 (Single GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/categories/920ba306-840e-4aa7-9d68-af0f1fd7b995 (PATCH)
+- https://book-catallog-backend-pi.vercel.app/api/v1/categories/52ba19c0-179f-4e14-a7a2-2be7263a1772 (DELETE)
 
 ### Books
 
-- api/v1/books/create-book (POST)
-- api/v1/books (GET)
-- api/v1/books/:categoryId/category (GET)
-- api/v1/books/:id (GET)
-- api/v1/books/:id (PATCH)
-- api/v1/books/:id (DELETE)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/create-book (POST)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/:categoryId/category (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/:id (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/:id (PATCH)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/:id (DELETE)
 
 ### Orders
 
-- api/v1/orders/create-order (POST)
-- api/v1/orders (GET) 
-- api/v1/orders/:orderId (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/orders/create-order (POST)
+- https://book-catallog-backend-pi.vercel.app/api/v1/orders (GET) 
+- https://book-catallog-backend-pi.vercel.app/api/v1/orders/:orderId (GET)

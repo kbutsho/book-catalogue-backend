@@ -11,7 +11,7 @@ const auth =
       try {
         const token = req.headers.authorization;
         if (!token) {
-          throw new ApiError(httpStatus.UNAUTHORIZED, 'unauthorized user!');
+          throw new ApiError(httpStatus.UNAUTHORIZED, 'unauthorized access!');
         }
         let verifiedUser = null;
         verifiedUser = jwtHelpers.verifyToken(token, config.jwt_secret as Secret);

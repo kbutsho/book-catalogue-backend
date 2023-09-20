@@ -54,7 +54,7 @@ const profileInfo = catchAsync(async (req: Request, res: Response) => {
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
-    message: 'user get Successfully',
+    message: 'user profile!',
     data: result,
   });
 });
