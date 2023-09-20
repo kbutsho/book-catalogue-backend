@@ -5,6 +5,7 @@
 #### User
 
 - https://book-catallog-backend-pi.vercel.app/api/v1/auth/signup (POST)
+- https://book-catallog-backend-pi.vercel.app/api/v1/auth/signin (POST)
 - https://book-catallog-backend-pi.vercel.app/api/v1/users (GET)
 - https://book-catallog-backend-pi.vercel.app/api/v1/users/0bf3449a-96b8-4a68-944b-e15b4aaccf23 (Single GET)
 - https://book-catallog-backend-pi.vercel.app/api/v1/users/0bf3449a-96b8-4a68-944b-e15b4aaccf23 (PATCH)
@@ -23,7 +24,7 @@
 
 - https://book-catallog-backend-pi.vercel.app/api/v1/books/create-book (POST)
 - https://book-catallog-backend-pi.vercel.app/api/v1/books (GET)
-- https://book-catallog-backend-pi.vercel.app/api/v1/books/category/febbf131-dcb5-44ff-ac3c-c5e6903b4cc3 (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/febbf131-dcb5-44ff-ac3c-c5e6903b4cc3/category (GET)
 - https://book-catallog-backend-pi.vercel.app/api/v1/books/1c0b73e0-bb3b-4975-ba8b-5252aa7fe231 (GET)
 - https://book-catallog-backend-pi.vercel.app/api/v1/books/1c0b73e0-bb3b-4975-ba8b-5252aa7fe231 (PATCH)
 - https://book-catallog-backend-pi.vercel.app/api/v1/books/1c0b73e0-bb3b-4975-ba8b-5252aa7fe231 (DELETE)

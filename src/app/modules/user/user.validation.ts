@@ -32,6 +32,20 @@ const create = z.object({
   }),
 });
 
+const login = z.object({
+  body: z.object({
+    email: z
+      .string({
+        required_error: 'email is required!',
+      })
+      .email(),
+    password: z
+      .string({
+        required_error: 'password is required!',
+      })
+  }),
+});
+
 const update = z.object({
   body: z.object({
     name: z.string().optional(),
@@ -46,6 +60,7 @@ const update = z.object({
 
 export const userValidation = {
   create,
-  update
+  update,
+  login
 };
 
