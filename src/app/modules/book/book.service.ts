@@ -4,6 +4,8 @@ import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
 import { IBook, IBookFilter, bookSearchableFields } from './book.interface';
+import ApiError from '../../../errors/ApiError';
+import httpStatus from 'http-status';
 
 const createBook = async (data: Book): Promise<IBook | null> => {
   const isExist = await prisma.book.findFirst({ where: { title: data.title } });
@@ -105,6 +107,9 @@ const getBooksByCategoryId = async (categoryId: string, options: IPaginationOpti
         ? { [options.sortBy]: options.sortOrder }
         : {},
   });
+  if (result === null) {
+    throw new ApiError(httpStatus.NOT_FOUND, "book not found!")
+  }
   const total = await prisma.book.count({
     where: { categoryId: categoryId }
   });
@@ -121,10 +126,13 @@ const getBooksByCategoryId = async (categoryId: string, options: IPaginationOpti
 const getBookById = async (id: string): Promise<Book | null> => {
   const result = await prisma.book.findUnique({
     where: { id: id }, include: {
+      category: { select: { id: true, title: true } },
       reviews: true,
-      category: { select: { id: true, title: true } }
     },
   });
+  if (result === null) {
+    throw new ApiError(httpStatus.NOT_FOUND, "book not found!")
+  }
   return result;
 };
 

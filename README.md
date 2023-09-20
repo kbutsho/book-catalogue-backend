@@ -23,10 +23,10 @@
 
 - https://book-catallog-backend-pi.vercel.app/api/v1/books/create-book (POST)
 - https://book-catallog-backend-pi.vercel.app/api/v1/books (GET)
-- https://book-catallog-backend-pi.vercel.app/api/v1/books/:categoryId/category (GET)
-- https://book-catallog-backend-pi.vercel.app/api/v1/books/:id (GET)
-- https://book-catallog-backend-pi.vercel.app/api/v1/books/:id (PATCH)
-- https://book-catallog-backend-pi.vercel.app/api/v1/books/:id (DELETE)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/category/febbf131-dcb5-44ff-ac3c-c5e6903b4cc3 (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/1c0b73e0-bb3b-4975-ba8b-5252aa7fe231 (GET)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/1c0b73e0-bb3b-4975-ba8b-5252aa7fe231 (PATCH)
+- https://book-catallog-backend-pi.vercel.app/api/v1/books/1c0b73e0-bb3b-4975-ba8b-5252aa7fe231 (DELETE)
 
 ### Orders
 
